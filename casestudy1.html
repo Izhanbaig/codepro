@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies - CodePro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4faff;
+      color: #002b5c;
+    }
+    .case-section {
+      padding: 60px 0;
+      background: linear-gradient(to right, #e6f2ff, #ffffff);
+    }
+    .heading-block {
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .heading-block h2 {
+      color: #0056b3;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    .heading-block h5 {
+      color: #007acc;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    .heading-block p {
+      font-size: 1.05rem;
+      color: #333;
+    }
+    .card-box {
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 40px;
+    }
+    .card-box .row {
+      align-items: stretch;
+    }
+    .card-box img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      min-height: 300px;
+    }
+    .highlight-card {
+      position: relative;
+      background-color: #ffffff;
+      padding: 30px;
+      transition: 0.3s ease;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .highlight-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #002c5f;
+      z-index: 0;
+      transition: width 0.6s ease;
+    }
+    .highlight-card:hover::before {
+      width: 100%;
+    }
+    .highlight-card * {
+      position: relative;
+      z-index: 2;
+      transition: color 0.6s ease;
+    }
+    .highlight-card:hover * {
+      color: #ffffff !important;
+    }
+    .testimonial {
+      background-color: #f0faff;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      border-radius: 10px;
+      margin-top: 15px;
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+    .highlight-card:hover .testimonial {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <section class="case-section">
+    <div class="container">
+      <div class="heading-block" data-aos="fade-down">
+        <h2>Case Studies & Success Stories</h2>
+        <h5>Real Impact. Real Results. Powered by CodePro.</h5>
+        <p>At <strong>CodePro Software and Web Services</strong>, we don’t just build solutions — we build success stories.</p>
+        <p>This page will inspire trust and showcase our real-world value with tangible examples.</p>
+      </div>
+
+      <!-- Start cards loop -->
+      <!-- Card Template Start -->
+      <!-- Repeat this block and swap row order using flex-md-row-reverse -->
+      <div class="card-box shadow" data-aos="zoom-in">
+        <div class="row g-0 flex-md-row">
+          <div class="col-md-5">
+            <img src="https://picsum.photos/1500" alt="School">
+          </div>
+          <div class="col-md-7 highlight-card">
+            <h5>🏫 School Management System for Al-Huda Grammar School</h5>
+            <p><strong>Location:</strong> Hyderabad, Pakistan</p>
+            <p><strong>Problem:</strong> Manual record keeping, no real-time fee tracking, and communication gaps between parents and school.</p>
+            <p><strong>Our Solution:</strong></p>
+            <ul>
+              <li>✔️ Full-featured cloud-based School Management System</li>
+              <li>✔️ Fee management, attendance, report cards, parent portal</li>
+              <li>✔️ SMS integration for real-time notifications</li>
+            </ul>
+            <p><strong>Impact:</strong></p>
+            <ul>
+              <li>✅ Reduced admin time by 60%</li>
+              <li>✅ Improved parent satisfaction</li>
+              <li>✅ Digitized reports and fee slips with one click</li>
+            </ul>
+            <div class="testimonial">
+              “We can now track every student and fee in real time. CodePro made our school smarter.” — Principal, Al-Huda Grammar
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-box shadow" data-aos="zoom-in">
+  <div class="row g-0 flex-md-row-reverse">
+    <div class="col-md-5">
+      <img src="https://picsum.photos/1503" alt="POS System">
+    </div>
+    <div class="col-md-7 highlight-card">
+      <h5>🍔 POS System for Tandoori Flames Restaurant</h5>
+      <p><strong>Location:</strong> Karachi</p>
+      <p><strong>Problem:</strong> Slow billing, inventory mismanagement, and no order tracking</p>
+      <p><strong>Our Solution:</strong></p>
+      <ul>
+        <li>POS for restaurants with touch-screen billing, table management, and live kitchen status</li>
+        <li>Real-time sales and stock reports</li>
+        <li>Mobile-friendly dashboards for owners</li>
+      </ul>
+      <p><strong>Impact:</strong></p>
+      <ul>
+        <li>✅ Order delivery speed improved by 35%</li>
+        <li>✅ Live inventory tracking avoided losses</li>
+        <li>✅ Daily reports sent to WhatsApp</li>
+      </ul>
+      <div class="testimonial">
+        “Our staff adapted quickly. Managing our restaurant has never been easier.” — Owner, Tandoori Flames
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-box shadow" data-aos="zoom-in">
+  <div class="row g-0 flex-md-row">
+    <div class="col-md-5">
+      <img src="https://picsum.photos/1502" alt="Fish Market">
+    </div>
+    <div class="col-md-7 highlight-card">
+      <h5>🐟 Fish Market Automation for Khokhar Traders</h5>
+      <p><strong>Location:</strong> Ibrahim Hyderi, Karachi</p>
+      <p><strong>Problem:</strong> Paper-based dealing from farmer to retailer, confusion in credit/debit cycles</p>
+      <p><strong>Our Solution:</strong></p>
+      <ul>
+        <li>Built custom Fish Market ERP with modules for catch entry, wholesale pricing, seller tracking</li>
+        <li>Credit/Debit ledgers with SMS alerts</li>
+      </ul>
+      <p><strong>Impact:</strong></p>
+      <ul>
+        <li>✅ Transparent transactions from source to seller</li>
+        <li>✅ 80% fewer errors in accounts</li>
+        <li>✅ Real-time market price updates</li>
+      </ul>
+      <div class="testimonial">
+        “No more fights over payments. Everyone has a clear record now.” — CEO, Khokhar Traders
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-box shadow" data-aos="zoom-in">
+  <div class="row g-0 flex-md-row-reverse">
+    <div class="col-md-5">
+      <img src="https://picsum.photos/1501" alt="Fitness Club">
+    </div>
+    <div class="col-md-7 highlight-card">
+      <h5>🌐 WordPress Website + SEO for Local Fitness Club</h5>
+      <p><strong>Client:</strong> Flex Fitness, Hyderabad</p>
+      <p><strong>Problem:</strong> No online visibility or booking system</p>
+      <p><strong>Our Solution:</strong></p>
+      <ul>
+        <li>Developed WordPress site with trainer profiles, timetable, online membership</li>
+        <li>Google My Business setup</li>
+        <li>SEO campaign for “best gym in Hyderabad”</li>
+      </ul>
+      <p><strong>Impact:</strong></p>
+      <ul>
+        <li>✅ 3x website visitors in 2 months</li>
+        <li>✅ 25% rise in memberships</li>
+        <li>✅ Ranked #1 locally in Google Maps</li>
+      </ul>
+      <div class="testimonial">
+        “They built us a site and a brand. People find us every day through Google now!” — Manager, Flex Fitness
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-box shadow" data-aos="zoom-in">
+  <div class="row g-0 flex-md-row">
+    <div class="col-md-5">
+      <img src="https://picsum.photos/1499" alt="Auto Spare Parts">
+    </div>
+    <div class="col-md-7 highlight-card">
+      <h5>🔧 Custom ERP for Auto Spare Parts Business</h5>
+      <p><strong>Client:</strong> Haider Motors, Latifabad</p>
+      <p><strong>Problem:</strong> Tracking of 5000+ SKUs and manual stock-taking</p>
+      <p><strong>Our Solution:</strong></p>
+      <ul>
+        <li>Developed inventory & billing software tailored to their workflow</li>
+        <li>Barcode scanning support</li>
+        <li>Stock alerts and daily sales reports</li>
+      </ul>
+      <p><strong>Impact:</strong></p>
+      <ul>
+        <li>✅ Reduced inventory mismatch to near zero</li>
+        <li>✅ Instant search for parts using name/code</li>
+        <li>✅ Reports improved purchasing decisions</li>
+      </ul>
+      <div class="testimonial">
+        “We run everything through CodePro’s system now. It’s our backbone.” — Store Owner, Haider Motors
+      </div>
+    </div>
+  </div>
+</div>
+   </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
