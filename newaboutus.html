@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - CodePro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .about-us-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .about-us-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://picsum.photos/50') no-repeat center center/cover;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    .about-us-content {
+      padding: 20px;
+      max-width: 900px;
+    }
+
+    .about-us-content h1 {
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+
+    .about-us-content .highlight-blue {
+      color: #4da6ff;
+      font-weight: 600;
+    }
+
+    .about-us-content .highlight-white {
+      color: #ffffff;
+      font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+      .about-us-content h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .our-story-section {
+      background: linear-gradient(to right, #e6f0ff, #ffffff);
+    }
+
+    .our-heading {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+
+    .story-text {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #333;
+      text-align: justify;
+      padding-left: 25px;
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .our-heading {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .story-text {
+        text-align: left;
+        padding-left: 0;
+      }
+    }
+
+    h1 {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 64px;
+      font-weight: 900;
+      color: #007bff;
+      text-shadow: 0 0 10px rgba(0,123,255,0.3);
+    }
+
+    .vmv-section {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .vmv-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0056b3;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .vmv-box {
+      padding: 35px;
+      border: 1px solid #e0e0e0;
+      border-radius: 15px;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: all 0.4s ease;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .vmv-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: #0056b3;
+      z-index: -1;
+      transition: 0.4s ease-in-out;
+    }
+
+    .vmv-box:hover::before {
+      width: 100%;
+    }
+
+    .vmv-box:hover {
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0, 86, 179, 0.5);
+    }
+
+    .vmv-box h4 {
+      font-size: 1.75rem;
+      color: #0056b3;
+      font-weight: 700;
+      margin-bottom: 15px;
+      transition: color 0.4s ease-in-out;
+    }
+
+    .vmv-box:hover h4 {
+      color: #ffffff;
+    }
+
+    .vmv-values {
+      margin-top: 60px;
+    }
+
+    .vmv-values h4 {
+      font-size: 1.75rem;
+      color: #0056b3;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .vmv-value-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .vmv-value-item {
+      background-color: #f1f6ff;
+      padding: 15px 25px;
+      border-radius: 10px;
+      color: #0056b3;
+      font-size: 1.1rem;
+      font-weight: 600;
+      flex: 1 1 calc(50% - 30px);
+      min-width: 240px;
+      transition: 0.3s ease;
+    }
+
+    .vmv-value-item:hover {
+      background-color: #0056b3;
+      color: white;
+      box-shadow: 0 0 12px rgba(0, 86, 179, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .vmv-value-list {
+        flex-direction: column;
+      }
+      .vmv-values h4 {
+        text-align: center;
+      }
+    }
+
+    .what-we-do {
+      padding: 80px 20px;
+      background: #0056b3;
+    }
+
+    .what-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .sticky-heading {
+      position: sticky;
+      top: 100px;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .service-scroll-container {
+      max-height: 600px;
+      overflow-y: auto;
+      padding-right: 15px;
+    }
+
+    .service-scroll-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    .service-scroll-container::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+    }
+
+    .service-row {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .service-item {
+      position: relative;
+      background-color: #ffffff;
+      padding: 30px 30px 30px 80px;
+      border-left: 5px solid #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      background-color: #003d80;
+      color: #ffffff;
+      transform: translateX(10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-number {
+      position: absolute;
+      left: 20px;
+      top: 30px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #0056b3;
+      opacity: 0.3;
+    }
+
+    .service-item:hover .service-number {
+      color: #ffffff;
+      opacity: 0.4;
+    }
+
+    .service-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #003d99;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .service-item:hover .service-title {
+      color: #ffffff;
+    }
+
+    .service-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: #0056b3;
+      margin-top: 5px;
+      transition: width 0.3s ease, background-color 0.3s;
+    }
+
+    .service-item:hover .service-title::after {
+      width: 80px;
+      background-color: #ffffff;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .service-item:hover .service-description {
+      color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      .what-we-do {
+        padding: 50px 20px;
+      }
+      .sticky-heading {
+        position: static;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+      .service-scroll-container {
+        max-height: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="about-us-section">
+    <div class="about-us-content">
+      <h1>
+        <span class="highlight-blue">Empowering Businesses with Secure, Scalable Digital Solutions</span><br />
+        <span class="highlight-white">Since 2023, CodePro has been transforming traditional companies into high-growth online brands.</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="our-story-section py-5">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-md-3 col-12">
+          <h1 class="our-heading">Our <span style="font-weight: 400; color: #0056b3;">Story</span></h1>
+        </div>
+        <div class="col-md-9 col-12">
+          <p class="story-text">
+            Founded in early 2023 in Hyderabad, Pakistan, <strong>CodePro Software and Web Services</strong> began as a small web-design studio with a bold mission: to make enterprise-grade software accessible and affordable for growing businesses.
+            <br><br>
+            Over just two years, we've successfully delivered tailored digital solutions — from school management systems to agriculture platforms — empowering clients across education, hospitality, farming, and retail to thrive in the digital age.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vmv-section container">
+    <h2 class="vmv-title">Vision, Mission & Values</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6">
+        <div class="vmv-box h-100">
+          <h4>Vision</h4>
+          <p>To be the go-to partner for businesses seeking secure, scalable, and intuitive digital transformations.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="vmv-box h-100">
+          <h4>Mission</h4>
+          <p>To deliver end-to-end web and software services—development, hosting, SEO, and training—that exceed expectations and drive measurable growth.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="vmv-values mt-5">
+      <h4>Our Core Values</h4>
+      <div class="vmv-value-list">
+        <div class="vmv-value-item"><span>Integrity</span> – We do what’s right.</div>
+        <div class="vmv-value-item"><span>Innovation</span> – We challenge the status quo.</div>
+        <div class="vmv-value-item"><span>Excellence</span> – We never settle.</div>
+        <div class="vmv-value-item"><span>Collaboration</span> – We grow together.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="what-we-do container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="sticky-heading">
+          <h2 class="what-title">What We Do</h2>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="service-scroll-container">
+          <div class="service-row">
+            <!-- Repeatable items -->
+            <div class="service-item">
+              <div class="service-number">01</div>
+              <div class="service-title">School Management System</div>
+              <div class="service-description">Automate admissions, attendance, grading, and fee collection—all in one dashboard.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">02</div>
+              <div class="service-title">Restaurant POS</div>
+              <div class="service-description">Speed up order entry, kitchen displays, and billing with an intuitive interface.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">03</div>
+              <div class="service-title">Fish Market Software</div>
+              <div class="service-description">Manage farmer-to-seller transactions, inventory, and credit/debit workflows seamlessly.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">04</div>
+              <div class="service-title">Domain & Hosting</div>
+              <div class="service-description">Secure, high-performance servers with free SSL certificates and 6-month support.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">05</div>
+              <div class="service-title">SEO & Digital Marketing</div>
+              <div class="service-description">Proven strategies to boost your Google rankings, traffic, and conversions.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">06</div>
+              <div class="service-title">Custom & WordPress Websites</div>
+              <div class="service-description">Tailored UX/UI with robust backends—ideal for portfolios, blogs, and corporate sites.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">07</div>
+              <div class="service-title">E-Commerce Development</div>
+              <div class="service-description">Scalable online stores built on WooCommerce, Shopify, or custom stacks.</div>
+            </div>
+            <div class="service-item">
+              <div class="service-number">08</div>
+              <div class="service-title">Online Courses & Internships</div>
+              <div class="service-description">Hands-on training and real-world projects to launch fresh graduates into tech careers.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
